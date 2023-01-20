@@ -6,10 +6,13 @@ myArray=("Abath" "Kurva" "Acab")
 
 for str in ${myArray[@]}; do
   echo $str
-if [[ $word == a* || *b ]]
+if [[ $str == A* ]]
 then
-  echo "Starts with a or ends with b"
-else
-  echo "No match"
+  echo "Starts with A"
+fi
+
+if [[ $str == *b ]]
+then
+  echo "Ends with b"
 fi
 done

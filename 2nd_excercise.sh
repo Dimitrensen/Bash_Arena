@@ -1,21 +1,10 @@
 #!/usr/bin/env bash
 
-#make a script that reads an array of words and outputs if they start with a or end with b
+#generate random numbers if the number is above 23 append them to a file
 
-myArray=("Abath" "Kurva" "Acab")
+number=$RANDOM
+#or $1
 
-for str in ${myArray[@]}; do
-  echo $str
-done
-
-word="Abath" "Kurva" "Acab"
-
-if [[ $word = a* || *b ]]
-then
-  echo "Starts with a or ends with b"
-else
-  echo "No match"
+if [[ $number > 23 ]]; then
+echo $number >> file.txt
 fi
-
-#[[ $a == z* ]]   # True if $a starts with a "z" (wildcard matching).
-#[[ $a == "z*" ]] # True if $a is equal to z* (literal matching).
