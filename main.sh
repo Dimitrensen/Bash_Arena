@@ -9,3 +9,26 @@
 #If underwear size is L print "It is still ok", if XL "Not a chance, you're out", if M "Go all in"
 
 
+read -p "What is your age? " age
+if [[ $age < 16 ]]; then
+  echo "You will go to jail"
+else
+  echo "You are good to go"
+fi
+
+read -p "What is your first name? " first_name
+
+read -p "What is your last name? " last_name
+if [[ $last_name == *a ]]; then
+  echo "She is a woman"
+else
+  echo "He's a man"
+fi
+if [[ $age > 18 && $last_name != *a ]]; then
+ echo "The program is broken"
+ exit 130
+ fi
+
+read -p "what size of underwear do you wear? " size
+
+#echo "Your name is $first_name $last_name name your age is $age and your undwear size is $underwear"
