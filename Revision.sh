@@ -27,8 +27,15 @@ fi
 if [[ $age > 18 && $last_name != *a ]]; then
  echo "The program is broken"
  exit 130
- fi
+fi
 
 read -p "what size of underwear do you wear? " size
+if [[ $size == L ]]; then
+  echo "It is still ok"
+elif [[ $size == XL ]]; then
+  echo "Not a chance, you are out"
+elif [[ $size == M ]]; then
+  echo "Go all in"
+fi
 
 #echo "Your name is $first_name $last_name name your age is $age and your undwear size is $underwear"
