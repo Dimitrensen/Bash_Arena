@@ -36,6 +36,8 @@ elif [[ $size == XL ]]; then
   echo "Not a chance, you are out"
 elif [[ $size == M ]]; then
   echo "Go all in"
+else
+ echo "Invalid Output"
 fi
 
 #echo "Your name is $first_name $last_name name your age is $age and your undwear size is $underwear"
