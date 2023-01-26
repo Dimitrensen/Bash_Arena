@@ -2,8 +2,6 @@
 
 #Modify the previous script to accept an unlimited number of files and directories as arguments.
 
-file_name=("$@") 
-
 for file_name in "$@"; do
 if [ -e $file_name ]; then
   echo "$file_name exists"
