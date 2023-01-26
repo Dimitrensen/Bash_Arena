@@ -1,26 +1,21 @@
 #!/usr/bin/env bash
 
-#Write a shell script that prompts the user for a name of a file or directory and reports if it is a regular file, a directory, or another type of file.
-#Also perform an ls command against the file or directory with the long listing option.
+#Modify the previous script to accept an unlimited number of files and directories as arguments.
 
-file_name="file.txt"
-
-if [ -e $file_name ]; then
-  echo "$file_name exists"
-else
-  echo "$file_name does not exist"
-fi
-
-if [ -f $file_name ]; then
-  echo "$file_name is a regular file"
-else
-  echo "$file_name is not a regular file"
-fi
-
-if [ -d $file_name ]; then
-  echo "$file_name is a directory"
-else
-  echo "$file_name is not a directory"
-fi
-
-#Modify the previous script to that it accepts the file or directory name as an argument instead of prompting the user to enter it.
+for argument in "$@"; do
+  if [ -e "$argument" ]; then
+    echo "$argument exists"
+  else
+    echo "$argument does not exist"
+  fi
+  if [ -f "$argument" ]; then
+    echo "$argument is a regular file"
+  else
+    echo "$argument is not a regular file"
+  fi
+  if [ -d "$argument" ]; then
+    echo "$argument is a directory"
+  else
+    echo "$argument is not a directory"
+  fi
+done
