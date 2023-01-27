@@ -4,12 +4,8 @@
 
 file_or_directory=$1
 
-if [ -e $1 ]; then
-  echo "$1 is a file"
+if [ -e $file_name ]; then
+  echo "$file_name is a file"
 else
-  echo "$1 does not exist"
-fi
-
-if [ -d $1 ]; then
- exit 1
+  echo "$file_name does not exist"
 fi
