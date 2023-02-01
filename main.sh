@@ -1,5 +1,11 @@
-#Write a shell script that consists of a function that displays the number of files in the present working directory. Name this function “file_count” and call it in your script. If you use variable in your function, remember to make it a local variable.
+#Modify the script from the previous exercise. Make the “file_count” function accept a directory as an argument. Next, have the function display the name of the directory followed by a colon. Finally display the number of files to the screen on the next line. Call the function three times. First on the “/etc” directory, next on the “/var” directory and finally on the “/usr/bin” directory.
 
-for file_count in "main.sh"; do
-ls -l
-done
+file_count () {
+    local dir=$1
+    local count=$(ls -1 "$dir" | wc -l)
+    echo "Number of files in the $dir: $count"
+}
+
+file_count /etc
+file_count /var
+file_count /usr/bin
