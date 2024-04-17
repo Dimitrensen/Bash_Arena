@@ -54,6 +54,8 @@ the final result should be
 }
 ```
 
+json-template.sh base.json extension.json result.json
+
 
 
 tips:
