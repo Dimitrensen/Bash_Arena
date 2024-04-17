@@ -26,6 +26,10 @@ in the second file we have the bellow json
   "price":"{{d}}",
   "location":{
     "toc":"{{b.c}}"
+  },
+  "target":{
+    "f":"{{b}}"
+  }
 }
 ```
 
@@ -41,6 +45,12 @@ the final result should be
   "price":[1,2,3,4,5,6],
   "location":{
     "toc":"pineapple"
+  },
+  "target":{
+    "f":{
+      "c":"pineapple"
+    }
+  }
 }
 ```
 
