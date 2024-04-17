@@ -21,7 +21,7 @@ in the second file we have the bellow json
 {
   "store":"234455",
   "data":{
-    point:"{{a}}"
+    "point:"{{a}}"
   },
   "price":"{{d}}",
   "location":{
@@ -40,7 +40,7 @@ the final result should be
 {
   "store":"234455",
   "data":{
-    point:"banana"
+    "point:"banana"
   },
   "price":[1,2,3,4,5,6],
   "location":{
